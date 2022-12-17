@@ -1,6 +1,6 @@
 # Pandemica 🔬🦠
 
-Pandemica is a SIR model built with C++ to visualize the spreading of a simulated epidemic/pandemic. 
+Pandemica is a 2D pandemic simulation built with C# & Unity to visualize the spreading of a simulated epidemic/pandemic. 
 
 The [SIR model](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology) (Susceptible, Infected, Recovered) is widely known in epidemiology for its simplicity yet accuracy in disease modeling.
 
