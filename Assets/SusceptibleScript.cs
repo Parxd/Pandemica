@@ -1,60 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class SusceptibleScript : MonoBehaviour
 {
-    // Attributes for changing particle speed
+    public GameObject susceptible;
+    // Attributes for infection
+    private bool start = false;
     private float timer = 0;
-    // Attributes for wall collisions
-    private Rigidbody2D rb;
-    private Vector2 lastVelocity;
+    // Higher means more time required to infect
+    public float infectionRate = 1;
 
-    // Return random 2D vector
-    private Vector2 RandomVector(float min, float max)
-    {
-        var x = Random.Range(min, max);
-        var y = Random.Range(min, max);
-        return new Vector2(x, y);
-    }
-
-    // Initiailize with random location & velocity
     void Start()
     {
-        transform.position = new Vector2(transform.position.x + Random.Range(-8.3f, 8.3f),
-                                        transform.position.y + Random.Range(-4.6f, 4.6f));
-        rb = GetComponent<Rigidbody2D>();
-        rb.velocity = RandomVector(-0.25f, 0.25f);
+
     }
 
+    // Update is called once per frame
     void Update()
     {
-        float timeInterval = Random.Range(50, 300);
-        if (timer < timeInterval)
+        if (start)
         {
-            timer += Time.deltaTime;
+            if (timer < infectionRate)
+            {
+                timer += Time.deltaTime;
+            }
+            else
+            {
+                Debug.Log("Color changed.");
+                susceptible.GetComponent<SpriteRenderer>().color = Color.red;
+                timer = 0;
+            }
         }
-        else
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 8)
         {
+            start = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 8)
+        {
+            start = false;
             timer = 0;
-            GetComponent<Rigidbody2D>().velocity = RandomVector(-0.25f, 0.25f);
         }
-    }
-
-    // Record last velocity for reflecting off walls
-    private void FixedUpdate()
-    {
-        lastVelocity = rb.velocity;
-    }
-
-    // Reflect off walls
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        var speed = lastVelocity.magnitude;
-        var direction = Vector2.Reflect(lastVelocity.normalized,
-                                        collision.contacts[0].normal);
-        Debug.Log(direction);
-        rb.velocity = direction * Mathf.Max(speed, Random.Range(-0.25f, 0.25f));
     }
 }
