@@ -22,9 +22,7 @@ public class ParticleScript : MonoBehaviour
     // Initiailize with random location & velocity
     void Start()
     {
-        transform.position = new Vector2(Random.Range(-8.3f, 8.3f), Random.Range(-4.6f, 4.6f));
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = RandomVector(-0.25f, 0.25f);
     }
 
     void Update()

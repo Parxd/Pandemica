@@ -5,6 +5,7 @@ using UnityEngine;
 public class SusceptibleScript : MonoBehaviour
 {
     public GameObject susceptible;
+    public GameObject infected;
     // Attributes for infection
     private bool start = false;
     private float timer = 0;
@@ -27,12 +28,21 @@ public class SusceptibleScript : MonoBehaviour
             }
             else
             {
-                Debug.Log("Color changed.");
+                // Debug.Log("Color changed.");
                 susceptible.GetComponent<SpriteRenderer>().color = Color.red;
+
+                // destroy susceptible object
+                Destroy(susceptible);
+
+                // instantiate infected object with same velocity & position
+                GameObject spawn = Instantiate(infected, new Vector3(susceptible.transform.position.x, susceptible.transform.position.y, 0), 
+                                                susceptible.transform.rotation);
+                spawn.GetComponent<Rigidbody2D>().velocity = susceptible.GetComponent<Rigidbody2D>().velocity;
                 timer = 0;
             }
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 8)
