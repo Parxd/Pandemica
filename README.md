@@ -28,3 +28,8 @@ A system of differential equations is used:
 ```math
 \frac{dR}{dt} = bI(t)
 ```
+
+Future features:
+[ ] Asymptomatic but contagious infectious people
+[ ] UI to control settings before running simulation
+[ ] Keep track of S/I/R numbers to run data analysis on simulations
