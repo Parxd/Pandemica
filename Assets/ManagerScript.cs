@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ManagerScript : MonoBehaviour
 {
-    public int susceptiblePopulation = 500;
+    public float speed = 0.1f;
+    public int susceptiblePopulation = 999;
     public int infectedPopulation = 1;
     public GameObject susceptible;
     public GameObject infected;
@@ -15,13 +16,13 @@ public class ManagerScript : MonoBehaviour
         {
             GameObject spawn = Instantiate(susceptible, new Vector3(Random.Range(-8.3f, 8.3f), Random.Range(-4.6f, 4.6f), 0), 
                                             transform.rotation);
-            spawn.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-0.15f, 0.15f), Random.Range(-0.15f, 0.15f));
+            spawn.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-speed, speed), Random.Range(-speed, speed));
         }
         for (int i = 0; i < infectedPopulation; ++i)
         {
             GameObject spawn = Instantiate(infected, new Vector3(Random.Range(-8.3f, 8.3f), Random.Range(-4.6f, 4.6f), 0), 
                                             transform.rotation);
-            spawn.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-0.15f, 0.15f), Random.Range(-0.15f, 0.15f));
+            spawn.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-speed, speed), Random.Range(-speed, speed));
         }
     }
 
