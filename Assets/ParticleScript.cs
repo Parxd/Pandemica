@@ -27,7 +27,7 @@ public class ParticleScript : MonoBehaviour
 
     void Update()
     {
-        float timeInterval = Random.Range(50, 300);
+        float timeInterval = Random.Range(50, 200);
         if (timer < timeInterval)
         {
             timer += Time.deltaTime;
@@ -35,7 +35,7 @@ public class ParticleScript : MonoBehaviour
         else
         {
             timer = 0;
-            GetComponent<Rigidbody2D>().velocity = RandomVector(-0.25f, 0.25f);
+            GetComponent<Rigidbody2D>().velocity = RandomVector(-0.15f, 0.15f);
         }
     }
 
@@ -52,6 +52,6 @@ public class ParticleScript : MonoBehaviour
         var direction = Vector2.Reflect(lastVelocity.normalized,
                                         collision.contacts[0].normal);
         Debug.Log(direction);
-        rb.velocity = direction * Mathf.Max(speed, Random.Range(-0.25f, 0.25f));
+        rb.velocity = direction * Mathf.Max(speed, Random.Range(-0.15f, 0.15f));
     }
 }

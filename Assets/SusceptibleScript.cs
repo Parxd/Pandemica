@@ -28,9 +28,6 @@ public class SusceptibleScript : MonoBehaviour
             }
             else
             {
-                // Debug.Log("Color changed.");
-                susceptible.GetComponent<SpriteRenderer>().color = Color.red;
-
                 // destroy susceptible object
                 Destroy(susceptible);
 
@@ -38,7 +35,6 @@ public class SusceptibleScript : MonoBehaviour
                 GameObject spawn = Instantiate(infected, new Vector3(susceptible.transform.position.x, susceptible.transform.position.y, 0), 
                                                 susceptible.transform.rotation);
                 spawn.GetComponent<Rigidbody2D>().velocity = susceptible.GetComponent<Rigidbody2D>().velocity;
-                timer = 0;
             }
         }
     }
