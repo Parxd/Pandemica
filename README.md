@@ -30,9 +30,6 @@ A system of differential equations is used:
 ```
 
 Future features:
-
 - [ ] Asymptomatic but contagious infectious people
-
 - [ ] UI to control settings before running simulation
-
-- [ ] Keep track of S/I/R numbers to run data analysis on simulations
+- [ ] Keep track of S/I/R numbers to analyze data and confirm SIR model accuracy on simulations
