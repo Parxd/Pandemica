@@ -30,6 +30,9 @@ A system of differential equations is used:
 ```
 
 Future features:
-[ ] Asymptomatic but contagious infectious people
-[ ] UI to control settings before running simulation
-[ ] Keep track of S/I/R numbers to run data analysis on simulations
+
+- [ ] Asymptomatic but contagious infectious people
+
+- [ ] UI to control settings before running simulation
+
+- [ ] Keep track of S/I/R numbers to run data analysis on simulations
