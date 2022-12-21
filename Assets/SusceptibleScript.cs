@@ -14,7 +14,7 @@ public class SusceptibleScript : MonoBehaviour
 
     void Start()
     {
-
+        GetComponent<CircleCollider2D>().radius = Random.Range(0.5f, 2.5f);
     }
 
     // Update is called once per frame

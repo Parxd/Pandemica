@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ParticleScript : MonoBehaviour
 {
+    public float speed = 0.1f;
     // Attributes for changing particle speed
     private float timer = 0;
     // Attributes for wall collisions
@@ -27,7 +28,7 @@ public class ParticleScript : MonoBehaviour
 
     void Update()
     {
-        float timeInterval = Random.Range(50, 200);
+        float timeInterval = Random.Range(20, 60);
         if (timer < timeInterval)
         {
             timer += Time.deltaTime;
@@ -35,7 +36,7 @@ public class ParticleScript : MonoBehaviour
         else
         {
             timer = 0;
-            GetComponent<Rigidbody2D>().velocity = RandomVector(-0.15f, 0.15f);
+            GetComponent<Rigidbody2D>().velocity = RandomVector(-speed, speed);
         }
     }
 
@@ -52,6 +53,6 @@ public class ParticleScript : MonoBehaviour
         var direction = Vector2.Reflect(lastVelocity.normalized,
                                         collision.contacts[0].normal);
         Debug.Log(direction);
-        rb.velocity = direction * Mathf.Max(speed, Random.Range(-0.15f, 0.15f));
+        rb.velocity = direction * Mathf.Max(speed, Random.Range(-speed, speed));
     }
 }

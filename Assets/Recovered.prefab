@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 618427176269522412}
   - component: {fileID: 618427176269522415}
   - component: {fileID: 618427176269522414}
+  - component: {fileID: 5952714168287436376}
   m_Layer: 3
   m_Name: Recovered
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 618427176269522409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.4328175, y: 0.37248564, z: -0.106429175}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
+  m_LocalScale: {x: 0.025, y: 0.025, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -136,3 +137,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa413613a33ef26498a2912036278034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5952714168287436376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618427176269522409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2fac0d5bd9f5c4d9f68a003befa054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  immunityChance: 85
+  susceptible: {fileID: 1118565623861621421, guid: f757e94c7f6c91349902e55ad135df91, type: 3}

@@ -63,7 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   susceptible: {fileID: 1118565623861621421}
   infected: {fileID: 3471765444676897368, guid: 901eff492265da54c97d96cd899d5a37, type: 3}
-  infectionRate: 1
+  infectionRate: 1.99
 --- !u!1 &1118565623861621421
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ Transform:
   m_GameObject: {fileID: 1118565623861621421}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -0.036918897}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
+  m_LocalScale: {x: 0.025, y: 0.025, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1118565623506698601}
@@ -201,3 +201,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa413613a33ef26498a2912036278034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0.1
