@@ -32,4 +32,5 @@ A system of differential equations is used:
 Future features:
 - [X] Infectious people becoming more infectious during the peak of their illness
 - [ ] UI to control settings before running simulation
-- [ ] Keep track of S/I/R numbers to analyze data and confirm SIR model accuracy on simulations
+- [X] Manager keeps track of S/I/R numbers
+- [ ] Confirm SIR model accuracy on simulations with Python script using TCP socket communication
