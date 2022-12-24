@@ -5,8 +5,9 @@ using UnityEngine;
 public class ManagerScript : MonoBehaviour
 {
     public float speed = 0.1f;
-    public int susceptiblePopulation = 0;
+    public int susceptiblePopulation = 1999;
     public int infectedPopulation = 1;
+    public int recoveredPopulation = 0;
     public GameObject susceptible;
     public GameObject infected;
     // Start is called before the first frame update

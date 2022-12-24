@@ -21,6 +21,7 @@ public class InfectedScript : MonoBehaviour
     // WHEN the largest radius will occur
     private float maxInfectiousTime;
 
+    public GameObject manager;
     public CircleCollider2D circle;
     public GameObject infected;
     public GameObject recovered;
@@ -31,6 +32,7 @@ public class InfectedScript : MonoBehaviour
         // Randomize infection radius to model different infectious levels
         circle.radius = Random.Range(lowerBoundRadius, upperBoundRadius);
         maxInfectiousTime = Random.Range(0, recoveryTime * longestContagiousPeriod);
+        manager = GameObject.FindGameObjectWithTag("Manager");
     }
 
     // Update is called once per frame
@@ -52,6 +54,8 @@ public class InfectedScript : MonoBehaviour
         }
         else
         {
+            manager.GetComponent<ManagerScript>().infectedPopulation--;
+            manager.GetComponent<ManagerScript>().recoveredPopulation++;
             // destroy infected object
             Destroy(infected);
             // instantiate recovered object with same velocity & position

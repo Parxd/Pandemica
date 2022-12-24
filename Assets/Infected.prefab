@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa413613a33ef26498a2912036278034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0.1
 --- !u!1 &3471765444894994059
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,6 +202,11 @@ MonoBehaviour:
   recoveryTime: 100
   lowerBoundRadius: 2
   upperBoundRadius: 4
+  maxRadius: 8
+  radiusIncreaseRate: 0.0005
+  radiusDecreaseRate: 0.001
+  longestContagiousPeriod: 0.75
+  manager: {fileID: 0}
   circle: {fileID: 3471765444894994057}
   infected: {fileID: 3471765444676897368}
   recovered: {fileID: 618427176269522409, guid: 5bac349380b6b8147bd5a22125562230, type: 3}

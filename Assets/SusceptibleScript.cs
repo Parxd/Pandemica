@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SusceptibleScript : MonoBehaviour
 {
+    public GameObject manager;
     public GameObject susceptible;
     public GameObject infected;
     // Attributes for infection
@@ -15,6 +16,7 @@ public class SusceptibleScript : MonoBehaviour
     void Start()
     {
         GetComponent<CircleCollider2D>().radius = Random.Range(0.5f, 2.5f);
+        manager = GameObject.FindGameObjectWithTag("Manager");
     }
 
     // Update is called once per frame
@@ -28,6 +30,8 @@ public class SusceptibleScript : MonoBehaviour
             }
             else
             {
+                manager.GetComponent<ManagerScript>().susceptiblePopulation--;
+                manager.GetComponent<ManagerScript>().infectedPopulation++;
                 // destroy susceptible object
                 Destroy(susceptible);
 
