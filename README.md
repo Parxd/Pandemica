@@ -28,3 +28,8 @@ A system of differential equations is used:
 ```math
 \frac{dR}{dt} = bI(t)
 ```
+
+Future features:
+- [ ] Infectious people becoming more infectious during the peak of their illness
+- [ ] UI to control settings before running simulation
+- [ ] Keep track of S/I/R numbers to analyze data and confirm SIR model accuracy on simulations
