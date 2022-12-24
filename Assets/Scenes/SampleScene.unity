@@ -638,7 +638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef57452b985a4a4a8c7c17f59f79fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  susceptiblePopulation: 500
+  speed: 0.1
+  susceptiblePopulation: 1999
   infectedPopulation: 1
   susceptible: {fileID: 1118565623861621421, guid: f757e94c7f6c91349902e55ad135df91, type: 3}
   infected: {fileID: 3471765444676897368, guid: 901eff492265da54c97d96cd899d5a37, type: 3}
@@ -650,7 +651,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462138088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.1744337, y: 3.4679418, z: -0.042649765}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

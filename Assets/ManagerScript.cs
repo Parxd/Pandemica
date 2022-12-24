@@ -5,7 +5,7 @@ using UnityEngine;
 public class ManagerScript : MonoBehaviour
 {
     public float speed = 0.1f;
-    public int susceptiblePopulation = 999;
+    public int susceptiblePopulation = 0;
     public int infectedPopulation = 1;
     public GameObject susceptible;
     public GameObject infected;
