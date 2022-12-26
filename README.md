@@ -33,4 +33,4 @@ Future features:
 - [X] Infectious people becoming more infectious during the peak of their illness
 - [ ] UI to control settings before running simulation
 - [X] Manager keeps track of S/I/R numbers
-- [ ] Confirm SIR model accuracy on simulations with Python script using TCP socket communication
+- [X] Confirm SIR model accuracy on simulations with Python script using TCP socket communication (...sort of--added feature to write data to text file within C#)
