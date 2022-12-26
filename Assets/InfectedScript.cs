@@ -16,7 +16,7 @@ public class InfectedScript : MonoBehaviour
     public float radiusIncreaseRate = 0.0005f;
     // Radius decreases by this value every frame after maxRadius is reached
     public float radiusDecreaseRate = 0.001f;
-    // Ranges from 0% - 100% of recovery time
+    public float shortestContagiousPeriod = 0.25f;
     public float longestContagiousPeriod = 0.75f;
     // WHEN the largest radius will occur
     private float maxInfectiousTime;
@@ -31,7 +31,7 @@ public class InfectedScript : MonoBehaviour
     {
         // Randomize infection radius to model different infectious levels
         circle.radius = Random.Range(lowerBoundRadius, upperBoundRadius);
-        maxInfectiousTime = Random.Range(0, recoveryTime * longestContagiousPeriod);
+        maxInfectiousTime = Random.Range(recoveryTime * shortestContagiousPeriod, recoveryTime * longestContagiousPeriod);
         manager = GameObject.FindGameObjectWithTag("Manager");
     }
 
@@ -52,7 +52,7 @@ public class InfectedScript : MonoBehaviour
         {
             timer += Time.deltaTime;
         }
-        else
+        else if (timer >= recoveryTime || circle.radius == 0) 
         {
             manager.GetComponent<ManagerScript>().infectedPopulation--;
             manager.GetComponent<ManagerScript>().recoveredPopulation++;

@@ -619,6 +619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1462138090}
   - component: {fileID: 1462138089}
+  - component: {fileID: 1462138091}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Manager
@@ -639,8 +640,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  susceptiblePopulation: 0
-  infectedPopulation: 0
+  susceptiblePopulation: 999
+  infectedPopulation: 1
   recoveredPopulation: 0
   susceptible: {fileID: 1118565623861621421, guid: f757e94c7f6c91349902e55ad135df91, type: 3}
   infected: {fileID: 3471765444676897368, guid: 901eff492265da54c97d96cd899d5a37, type: 3}
@@ -659,6 +660,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1462138091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462138088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41eca6f190676114e88a86b398645b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1885072685
 GameObject:
   m_ObjectHideFlags: 0
