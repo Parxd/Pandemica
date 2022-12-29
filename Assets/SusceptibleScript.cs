@@ -9,6 +9,7 @@ public class SusceptibleScript : MonoBehaviour
     public GameObject infected;
     // Attributes for infection
     private bool start = false;
+    private bool destroy = false;
     private float timer = 0;
     // Higher means more time required to infect
     public float infectionRate = 1;
@@ -28,8 +29,9 @@ public class SusceptibleScript : MonoBehaviour
             {
                 timer += Time.deltaTime;
             }
-            else
+            else if (timer >= infectionRate && !destroy)
             {
+                destroy = true;
                 manager.GetComponent<ManagerScript>().susceptiblePopulation--;
                 manager.GetComponent<ManagerScript>().infectedPopulation++;
                 // destroy susceptible object

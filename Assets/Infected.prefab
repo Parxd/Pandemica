@@ -200,11 +200,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recoveryTime: 100
-  lowerBoundRadius: 2
+  lowerBoundRadius: 3
   upperBoundRadius: 4
   maxRadius: 8
   radiusIncreaseRate: 0.0005
   radiusDecreaseRate: 0.001
+  shortestContagiousPeriod: 0.25
   longestContagiousPeriod: 0.75
   manager: {fileID: 0}
   circle: {fileID: 3471765444894994057}

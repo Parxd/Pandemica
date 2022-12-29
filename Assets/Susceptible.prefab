@@ -61,9 +61,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9330f9e45433ce84497ec22b0949f4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
   susceptible: {fileID: 1118565623861621421}
   infected: {fileID: 3471765444676897368, guid: 901eff492265da54c97d96cd899d5a37, type: 3}
-  infectionRate: 1.99
+  infectionRate: 1.02
 --- !u!1 &1118565623861621421
 GameObject:
   m_ObjectHideFlags: 0

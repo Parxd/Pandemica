@@ -640,7 +640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  susceptiblePopulation: 999
+  susceptiblePopulation: 1999
   infectedPopulation: 1
   recoveredPopulation: 0
   susceptible: {fileID: 1118565623861621421, guid: f757e94c7f6c91349902e55ad135df91, type: 3}
